@@ -10,6 +10,17 @@ html, body {
 	box-sizing: border-box;
 	background-color: #ffeead;
 	margin: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 300px 300px;
+	grid-template-rows: 150px 150px 150px;
+	grid-gap: 3px;
 }
 
 .container > div {
@@ -24,8 +35,7 @@ html, body {
 	background-color: #96ceb4;
 }
 
-.container > div:nth-child(2n), 
-.container > div:last-child {
+.container > div:nth-child(2n) {
 	background-color: #ff6f69;
 }
 
