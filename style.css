@@ -10,17 +10,34 @@ html, body {
 	box-sizing: border-box;
 	background-color: #ffeead;
 	margin: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	height: 100vh;
 }
 
 .container {
+	height: 100%;
 	display: grid;
-	grid-template-columns: 300px 300px;
-	grid-template-rows: 150px 150px 150px;
+	grid-template-columns: repeat(12 , 1fr);
+	grid-template-rows: 70px auto 70px;
 	grid-gap: 3px;
+	grid-template-areas: "m m h h h h h h h h h h"
+	                      "m m c c c c c c c c c ."            
+	                       "m m  f f f f f f f f f f"                       ;
+}
+
+.container > .header {
+	grid-area: h;
+}
+
+.container > .menu {
+	grid-area: m;
+}
+
+.container > .content {
+	grid-area: c;
+}
+
+.container > .footer {
+	grid-area: f;
 }
 
 .container > div {
